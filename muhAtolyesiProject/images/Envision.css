@@ -1,0 +1,657 @@
+/********************************************
+   HTML ELEMENTS
+********************************************/
+
+/* Top Elements */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #CCC;
+    font: 70%/1.5em Verdana, Tahoma, arial, sans-serif;
+    color: black;
+    text-align: center;
+    overflow-x: hidden !important;
+}
+
+/* links */
+a, a:visited {
+    text-decoration: none;
+    color: #2180BC;
+    background: inherit;
+}
+
+    a:hover {
+        color: #88ac0b;
+        background: inherit;
+        text-decoration: underline;
+    }
+
+/* headers */
+h1, h2, h3 {
+    font-family: 'Trebuchet MS', Tahoma, Sans-serif;
+    font-weight: Bold;
+}
+
+h1 {
+    font-size: 130%;
+}
+
+h2 {
+    font-size: 120%;
+    text-transform: uppercase;
+    color: #88ac0b;
+}
+
+h3 {
+    font-size: 120%;
+    color: #666666;
+}
+
+/* images */
+img {
+    background: #FAFAFA;
+    border: 1px solid #E5E5E5;
+    padding: 5px;
+}
+
+    img.float-right {
+        margin: 5px 0px 10px 10px;
+    }
+
+    img.float-left {
+        margin: 5px 10px 10px 0px;
+    }
+
+h1, h2, h3, p {
+    padding: 10px;
+    margin: 0;
+}
+
+ul, ol {
+    margin: 5px 20px;
+    padding: 0 20px;
+}
+
+    ul li {
+        list-style-image: url(bullet.gif);
+    }
+
+code {
+    margin: 5px 0;
+    padding: 10px;
+    text-align: left;
+    display: block;
+    overflow: auto;
+    font: 500 1em/1.5em 'Lucida Console', 'courier new', monospace;
+    /* white-space: pre; */
+    background: #FAFAFA;
+    border: 1px solid #f2f2f2;
+}
+
+acronym {
+    cursor: help;
+    border-bottom: 1px solid #777;
+}
+
+blockquote {
+    margin: 10px;
+    padding: 0 0 0 28px;
+    border: 1px solid #f2f2f2;
+    background: #FAFAFA url(quote.gif) no-repeat 5px 5px;
+}
+
+/* start - table */
+table {
+    border-collapse: collapse;
+    margin: 10px;
+}
+
+th strong {
+    color: #fff;
+}
+
+th {
+    background: #93BC0C;
+    height: 29px;
+    padding-left: 12px;
+    padding-right: 12px;
+    color: #FFF;
+    text-align: left;
+    border-left: 1px solid #B6D59A;
+    border-bottom: solid 2px #FFF;
+}
+
+tr {
+    height: 30px;
+}
+
+td {
+    padding-left: 11px;
+    padding-right: 11px;
+    border-left: 1px solid #FFF;
+    border-bottom: solid 1px #ffffff;
+}
+
+    td.first, th.first {
+        border-left: 0px;
+    }
+
+tr.row-a {
+    background: #F8F8F8;
+}
+
+tr.row-b {
+    background: #EFEFEF;
+}
+/* end - table */
+
+/* form elements */
+form {
+    margin: 10px;
+    padding: 0 5px;
+    border: 1px solid #f2f2f2;
+    background-color: #FAFAFA;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+input {
+    padding: 2px;
+    border: 1px solid #eee;
+    font: normal 1em Verdana, sans-serif;
+    color: #777;
+}
+
+textarea {
+    padding: 2px;
+    font: normal 1em Verdana, sans-serif;
+    border: 1px solid #eee;
+    display: block;
+    color: #777;
+}
+
+input.button {
+    font: bold 12px Arial, Sans-serif;
+    height: 24px;
+    margin: 0;
+    padding: 2px 3px;
+    color: #FFF;
+    background: #8EB50C url(button-bg.jpg) repeat-x 0 0;
+    border: none;
+}
+
+/* search form */
+.mobilArama {
+    display: none;
+}
+
+.searchform {
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 5px 0 15px 0;
+    width: 190px;
+}
+
+    .searchform p {
+        margin: 0;
+        padding: 0;
+    }
+
+    .searchform input.textbox {
+        width: 120px;
+        color: #777;
+        height: 18px;
+        padding: 2px;
+        border: 1px solid #E5E5E5;
+        vertical-align: top;
+    }
+
+    .searchform input.button {
+        width: 60px;
+        height: 24px;
+        padding: 2px 5px;
+        vertical-align: top;
+    }
+
+/********************************************
+   LAYOUT
+********************************************/
+#wrap {
+    width: 820px;
+    background: #CCC url(content.jpg);
+    margin: auto;
+    text-align: left;
+}
+
+#content-wrap {
+    clear: both;
+    width: 760px;
+    padding: 0;
+    margin: 10px auto;
+}
+
+#header {
+    width: 820px;
+    position: relative;
+    height: 103px;
+    background: #CCC url(header.jpg) no-repeat center top;
+    padding: 0;
+    color: #FFF;
+    top: 0px;
+    left: 0px;
+}
+
+    #header h1#logo-text {
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        font: bolder 44px 'Trebuchet MS', Arial, Sans-serif;
+        letter-spacing: -2px;
+        color: #FFF;
+        text-transform: none;
+        /* change the values of top and left to adjust the position of the logo*/
+        top: 25px;
+        left: 55px;
+    }
+
+    #header h2#slogan {
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        font: normal 12px 'Trebuchet MS', Arial, Sans-serif;
+        text-transform: none;
+        color: #FFF;
+        /* change the values of top and left to adjust the position of the slogan*/
+        top: 79px;
+        left: 57px;
+    }
+
+    /* header links */
+    #header #header-links {
+        position: absolute;
+        top: 30px;
+        right: 40px;
+        color: #C6DDEE;
+        font-size: 15px;
+    }
+
+        #header #header-links a {
+            color: #FFF;
+            text-decoration: none;
+        }
+
+            #header #header-links a:hover {
+                color: #D4E59F;
+            }
+
+    #header #header-uyelinks {
+        position: absolute;
+        top: 7px;
+        right: 20px;
+        color: #C6DDEE;
+        font-size: 15px;
+        line-height: 1.7;
+        visibility: hidden;
+    }
+
+        #header #header-uyelinks a {
+            color: #FFF;
+            text-decoration: none;
+        }
+
+            #header #header-uyelinks a:hover {
+                color: #D4E59F;
+            }
+
+/* Menu */
+#menu {
+    clear: both;
+    margin: 0 auto;
+    padding: 0;
+    background: url(menu.jpg) repeat-x 0 0;
+    font: bold 17px/37px Verdana, Arial, Tahoma, Sans-serif;
+    height: 37px;
+    width: 780px;
+}
+
+    #menu ul {
+        float: left;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+        #menu ul li {
+            display: inline;
+        }
+
+            #menu ul li a {
+                display: block;
+                float: left;
+                padding: 0 13px;
+                color: #FFF;
+                text-decoration: none;
+            }
+
+            #menu ul li.last a {
+                padding-right: 20px;
+            }
+
+            #menu ul li a:hover {
+                color: #D4E59F;
+            }
+
+            #menu ul li#current a {
+                color: #D4E59F;
+            }
+
+.aktifSayfaNo {
+    border: none;
+    float: left;
+    outline: none;
+    padding: 10px 16px;
+    margin: 5px;
+    background-color: #E8E8E8;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+    .active, .aktifSayfaNo:hover {
+        color: white;
+        background-color: #666;
+        text-decoration: none;
+    }
+        /*a, a:visited override yapýldý*/
+        a.active, .active.aktifSayfaNo a:visited {
+            color: white;
+        }
+
+/* Main Column */
+#main {
+    float: left;
+    width: 70%;
+    padding: 0;
+    margin: 0 0 0 5px;
+    display: inline;
+}
+
+    #main h1 {
+        margin-top: 10px;
+        font: Bold 140% 'Trebuchet MS', Tahoma, Sans-serif;
+        color: #FFF;
+        padding: 5px 0 5px 25px;
+        border-bottom: 1px solid #EFF0F1;
+        background: #2E91CA url(square-green.png) no-repeat 3px 50%;
+    }
+
+.post-footer {
+    background-color: #2D8DC9; /*mavi renk kodu*/
+    padding: 5px;
+    margin: 20px 10px 0 10px;
+    /*border: 1px solid #f2f2f2;*/
+    font-size: 95%;
+}
+
+    .post-footer .date {
+        background: url(clock.gif) no-repeat left center;
+        padding-left: 20px;
+        margin: 0 10px 0 5px;
+    }
+
+    .post-footer .comments {
+        background: url(comment.gif) no-repeat left center;
+        padding-left: 20px;
+        margin: 0 10px 0 5px;
+    }
+
+    .post-footer .readmore {
+        background: url(page.gif) no-repeat left center;
+        padding-left: 20px;
+        margin: 0 10px 0 5px;
+    }
+
+/* Sidebar */
+#sidebar {
+    float: right;
+    width: 26.5%;
+    padding: 0;
+    margin: 0;
+    color: #68774A;
+}
+
+    #sidebar h1 {
+        margin-top: 10px;
+        padding: 5px 5px;
+        font: bold 1.4em 'Trebuchet MS', Tahoma, Sans-serif;
+        color: #728D26;
+        font-size: 20px;
+    }
+
+    #sidebar ul.sidemenu {
+        list-style: none;
+        text-align: left;
+        margin: 7px 4px 8px 0;
+        padding: 0;
+        text-decoration: none;
+        background: url(dots.jpg) repeat-x left top;
+    }
+
+        #sidebar ul.sidemenu li {
+            list-style: none;
+            background: url(dots.jpg) repeat-x left bottom;
+            padding: 4px 0 4px 5px;
+            margin: 0 2px;
+            color: #68774A;
+            font-size: 15px;
+        }
+
+* html body #sidebar ul.sidemenu li {
+    height: 1%;
+}
+
+#sidebar ul.sidemenu li a {
+    text-decoration: none;
+    background-image: none;
+    color: #666666;
+}
+
+    #sidebar ul.sidemenu li a:hover {
+        color: #1773BC;
+    }
+
+/* Footer */
+#footer {
+    color: #C6DDEE;
+    background: #CCC url(newsHeader.jpg) no-repeat center top;
+    clear: both;
+    width: 820px;
+    height: 105px;
+    text-align: center;
+    font-size: 92%;
+}
+
+    #footer a {
+        color: #FFF;
+        text-decoration: none;
+    }
+
+    #footer p {
+        font-size: 14px;
+    }
+
+.sonEklenenler {
+    display: none;
+}
+
+/* alignment classes */
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-right {
+    text-align: right;
+}
+
+/* display and additional classes */
+.clear {
+    clear: both;
+}
+
+.uyari {
+    background-color: #FEEAEB;
+    border-radius: 10px;
+    color: #a85959;
+}
+
+.mobilAramaButton {
+    border-color: #2A88C5;
+    background-color: transparent;
+    color: white;
+    Width: 50px;
+    float: right;
+    margin-right: 6px;
+    margin-top: 2px;
+    font-size: 20px;
+}
+
+    .mobilAramaButton::selection {
+        border-color: none;
+    }
+
+.mobilAramaTextbox {
+    font-size: x-large;
+    border-color: #2A88C5;
+    Background: #fff;
+    color: black;
+    Width: 284px;
+}
+
+    .mobilAramaTextbox::selection {
+        border-color: none;
+    }
+
+.mobilAramaUst {
+    background: #2A88C5;
+    width: 350px;
+    border-radius: 5px;
+    padding: 2px;
+    margin-top: 5px;
+}
+
+.maviButon {
+    border-color: #2E91CA;
+    background-color: #2E91CA;
+    Font-Size: medium;
+    color: white;
+    font-family: 'Trebuchet MS';
+    font-weight: bold;
+}
+
+.mobilAramaSinif {
+    float: right;
+}
+
+
+
+
+/*==================================== Mobil css kodlarý============================================*/
+/*eðer 600px'den' küçük ise bu kodlarý çalýþtýr*/
+@media screen and (max-width: 900px) {
+    #sidebar {
+        display: none;
+    }
+
+    #wrap {
+        background: none;
+        background-color: white;
+        width: 420px;
+    }
+
+    #header {
+        width: 420px;
+        background: #CCC url(mobilHeader.jpg) no-repeat center top;
+        height: 85px;
+    }
+
+        #header h1#logo-text {
+            top: 7px;
+            left: 105px;
+        }
+
+        #header h2#slogan {
+            left: 100px;
+            top: 60px;
+        }
+
+        #header #header-links {
+            display: none;
+        }
+
+        #header #header-uyelinks {
+            visibility: visible;
+        }
+
+    #main {
+        width: 350px;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    form {
+        width: 330px;
+    }
+
+    .mobilArama {
+        display: inline;
+    }
+
+    #footer {
+        width: 420px;
+        height: 760px;
+        background-color: #2D8DC9;
+        background-image: none;
+    }
+
+        #footer p {
+            font-size: 14px;
+        }
+
+    .sonEklenenler {
+        text-align: left;
+        text-decoration: none;
+        display: inline;
+    }
+
+        .sonEklenenler li {
+            padding-left: 75px;
+            font-size: 16px;
+        }
+
+
+        .sonEklenenler h1 {
+            font-size: 22px;
+            padding-left: 90px;
+        }
+
+        .sonEklenenler p {
+            text-align: center;
+        }
+}

@@ -1,0 +1,246 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="main.master.cs" Inherits="muhAtolyesiProject.main" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142130475-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-142130475-1');
+    </script>
+
+    <!-- Hotjar Tracking Code for www.MyBlog56.com -->
+    <%--<script src="scripts/HotjarTracking.js"></script>--%>
+
+    <!-- ads reklam -->
+    <script data-ad-client="ca-pub-9380561475079743" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+    <!-- addthis share buttons -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e52e3793eae7388"></script>
+
+
+    <%-- <script src="scripts/jquery.min.js"></script>  --%>
+
+    <link rel="shortcut icon" type="image/png" href="images/CloudBlue.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <link rel="stylesheet" href="images/Envision.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.9, user-scalable=no" />
+    <meta http-equiv="content-language" content="tr" />
+    <link rel="canonical" href="http://www.MyBlog56.com/" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div id="wrap">
+        <%--header start--%>
+        <div id="header">
+            <a href="http://www.myblog56.somee.com">
+                <h1 id="logo-text">MyBlog56 </h1>
+            </a>
+            <h2 id="slogan">Programlama dilleri proje örnekleri</h2>
+
+            <%if ((string)Session["giris"] != "uye")
+                {%>
+            <div id="header-uyelinks">
+                <p>
+                    <a href="uyeol">&nbsp;&nbsp;Üye Ol</a>
+                    <br />
+                    <a href="girisyap">Üye Girişi</a>
+                </p>
+            </div>
+            <%}%>
+
+            <div id="header-links">
+                <p>
+                    <a href="SSS">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SSS</a>| <a href="hakkimizda">Hakkımızda</a>
+                    <br />
+                    <a href="ozelders">Özel Ders </a>| <a href="reklamver">Reklam Ver</a>
+                </p>
+            </div>
+        </div>
+        <%--header end--%>
+
+
+        <%--menu start--%>
+        <div id="menu">
+            <ul>
+                <li><a href="Java.aspx">Java</a></li>
+                <li><a href="Csharp.aspx">C#</a></li>
+                <li><a href="Arduino.aspx">Arduino</a></li>
+                <li><a href="haberler.aspx">Haberler</a></li>
+                <li><a href="hakkimizda.aspx">Hakkımızda</a></li>
+                <li><a href="iletisim">İletişim</a></li>
+                  <%if ((string)Session["giris"] != "uye")
+                    {%>
+                <li><a href="uyeol">Üye Ol</a></li>
+                <li><a class="last" href="girisyap">Üye Girişi</a></li>
+                <%}
+                    else
+                    { %>
+                <li><a class="last" href="ozelders">Özel Ders</a></li>
+
+                <%} %>
+            </ul>
+        </div>
+        <%--menu end--%>
+
+        <%--content start--%>
+        <div id="content-wrap">
+            <form id="form1" runat="server" style="border: none">
+                <div id="sidebar">
+
+
+                    <%if ((string)Session["login"] == "admin")
+                        { %>
+                    <p>
+                        <asp:Button ID="btnOn" runat="server" Text=" Admin Paneli" CssClass="button" Width="182px" Height="26px" Font-Size="Medium" OnClick="btnOn_Click" />
+                        <br />
+                        <br />
+
+                        <asp:Button ID="btnOff" runat="server" Text="Ç&#305;k&#305;&#351;" CssClass="button" Width="182px" Height="26px" Font-Size="Medium" OnClick="btnOff_Click" />
+                    </p>
+                    <%} %>
+                    <%if ((string)Session["giris"] == "uye")
+                        {%>
+                    <p>
+                        <span style="font-size: medium"><b> Hoşgeldin,&nbsp;<%= (string)Session["isim"] %></b></span>
+                        <br />
+                        <br />
+                        <asp:Button ID="btnUyeCikis" CssClass="button" Width="182px" Height="26px" Font-Size="Medium" runat="server" Text="Ç&#305;k&#305;&#351;" OnClick="btnUyeCikis_Click1" />
+                    </p>
+                    <%} %>
+
+
+                    <p id="siteiciarama" style="line-height: 1.5;">
+                        <asp:Label ID="lbl_siteIciArama" ForeColor="#728D26" Font-Bold="true" Font-Size="Large" runat="server" Text="Site &#304;çi Arama"></asp:Label>
+
+
+                        <asp:TextBox ID="TextBoxArama" placeholder="Sitede ara.." runat="server" MaxLength="40" BorderColor="Black" Font-Size="Medium" Width="178px"></asp:TextBox>
+                        <br />
+
+                        <asp:Label ID="lbl_sinif" runat="server" ForeColor="#728D26" Font-Bold="true" Font-Size="Large" Text="S&#305;n&#305;f Seç"></asp:Label>
+                        <br />
+
+                        <asp:DropDownList ID="DropDownList_siniflar" Width="180px" Font-Size="Medium" runat="server" BackColor="White">
+                            <asp:ListItem Value="sinifYok">S&#305;n&#305;f Seç</asp:ListItem>
+                            <asp:ListItem Value="1">1. S&#305;n&#305;f</asp:ListItem>
+                            <asp:ListItem Value="2">2. S&#305;n&#305;f</asp:ListItem>
+                            <asp:ListItem Value="3">3. S&#305;n&#305;f</asp:ListItem>
+                            <asp:ListItem Value="4">4. S&#305;n&#305;f</asp:ListItem>
+                        </asp:DropDownList>
+
+                        <br />
+
+                        <asp:Label ID="lbl_detayliAra" ForeColor="#728D26" Font-Bold="true" Font-Size="Large" runat="server" Text="Detayl&#305; Ara"></asp:Label>
+                        <br />
+
+                        <asp:DropDownList ID="DropDownList_detayliAra" Width="180px" Font-Size="Medium" runat="server" BackColor="White">
+                            <asp:ListItem Value="siralamaYok">S&#305;ralama Seç</asp:ListItem>
+                            <asp:ListItem Value="tarihEnYeni">Tarihe Göre (En Yeni)</asp:ListItem>
+                            <asp:ListItem Value="tarihEnEski">Tarihe Göre (En Eski)</asp:ListItem>
+                        </asp:DropDownList>
+                        <br />
+                        <br />
+
+                        <asp:Button ID="ButtonAra" runat="server" Font-Size="Medium" CssClass="button" Width="182px" BackColor="#F0F0F0" BorderColor="Black" Text="ARA" OnClick="ButtonAra_Click" Height="26px" />
+
+                    </p>
+
+                    <h1>Kategoriler</h1>
+                    <ul class="sidemenu">
+                        <asp:Repeater ID="rpt_kategoriler" runat="server">
+                            <ItemTemplate>
+                                <li><a href="<%#  Eval("kategorilerim").ToString().ToLower().Replace(" ", "") %>.aspx"><%# Eval("kategorilerim") %> (<%# Eval("toplamMakalelerim") %>)</a></li>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </ul>
+                    <h1>Hızlı Erişim</h1>
+                    <ul class="sidemenu">
+                        
+                    
+                        <li><a href="#" target="_blank">Link1</a></li>
+                        <li><a href="#" target="_blank">Link2</a></li>
+                        <li><a href="#" target="_blank">Link3</a></li>
+                        <li><a href="#" target="_blank">Link4</a></li>
+                        <li><a href="#" target="_blank">Link5</a></li>
+
+                  
+                    </ul>
+                    <%--<h1>Son Eklenenler</h1>
+                    <ul class="sidemenu">
+                        <asp:Repeater ID="rpt_sonEklenenler_masaustu" runat="server">
+                            <ItemTemplate>
+                                <li><a href="<%#  Eval("kategoriBaslik").ToString().ToLower().Replace(" ", "") %>.aspx?konu=<%# Eval("id") %>"><%# Eval("baslik").ToString() %></a></li>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </ul>--%>
+                    <h1>Bizi Takip Edin</h1>
+
+
+                    <a href="https://www.youtube.com/omerfarukellialti" target="_blank">
+                        <img src="images/youtube.png" alt="youtube" width="48" height="48" style="background-color: transparent; border: none" /></a>
+                </div>
+
+                <div id="main">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+
+            </form>
+        </div>
+        <%--content end--%>
+
+        <%--footer start--%>
+        <div id="footer">
+            <div class="sonEklenenler">
+                <p style="font-size: 16px; line-height: 1.5">
+                    Görüş ve Önerilerinizi Bekliyoruz
+                  
+                </p>
+                <p style="text-align: center; font-size: 24px">Hızlı Erişim</p>
+                <p style="font-size: 16px; line-height: 2">
+
+                 
+                    <a href="ozelders">📝 Özel Ders</a>
+
+                </p>
+                <br />
+                <p style="text-align: center; font-size: 24px">Son Eklenenler</p>
+                <p>
+                    <asp:Repeater ID="rpt_sonEklenenler" runat="server">
+                        <ItemTemplate>
+                            <a href="<%#  Eval("kategoriBaslik").ToString().ToLower().Replace(" ", "") %>.aspx?konu=<%# Eval("id") %>" style="font-size: 16px; line-height: 2"><%# Eval ("baslik").ToString().PadRight(35).Substring(0,35) %>..</a>
+                        </ItemTemplate>
+                        <SeparatorTemplate>
+                            <br />
+                        </SeparatorTemplate>
+                    </asp:Repeater>
+                </p>
+                <br />
+
+                <p style="text-align: center; font-size: 24px">Bizi Takip Edin</p>
+                <p>
+                   
+                    &nbsp;&nbsp;
+                    <a href="https://www.youtube.com/omerfarukellialti" target="_blank">
+                        <img src="images/youtube.png" alt="youtube" width="48" height="48" style="background-color: transparent; border: none" /></a>
+
+                </p>
+            </div>
+            <p style="padding-top: 10px; line-height: 2">
+                &copy;2019 MyBlog56.com 
+            <br />
+                Programlama dilleri örnek projeler..
+            </p>
+        </div>
+        <%--footer end--%>
+    </div>
+</body>
+</html>
