@@ -24,7 +24,7 @@ namespace muhAtolyesiProject
         {
             get
             {
-                return "Provider = Microsoft.ACE.OLEDB.12.0; Data source =" + HttpContext.Current.Server.MapPath("model/myBlog56Db.accdb");
+                return "Provider = Microsoft.ACE.OLEDB.12.0; Data source =" + HttpContext.Current.Server.MapPath("models/myBlog56Db.accdb");
             }
         }
 

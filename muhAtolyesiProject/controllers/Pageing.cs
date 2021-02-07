@@ -64,13 +64,13 @@ namespace muhAtolyesiProject
         {
             int ToplamSayfaSayisi;
             StringBuilder sb = new StringBuilder();
-            if (ToplamKayitSayisi(sayfa) % 7 == 0)
+            if (ToplamKayitSayisi(sayfa) % 3 == 0)
             {
-                ToplamSayfaSayisi = ToplamKayitSayisi(sayfa) / 7;
+                ToplamSayfaSayisi = ToplamKayitSayisi(sayfa) / 3;
             }
             else
             {
-                ToplamSayfaSayisi = ToplamKayitSayisi(sayfa) / 7 + 1;
+                ToplamSayfaSayisi = ToplamKayitSayisi(sayfa) / 3 + 1;
             }
 
             for (int i = 0; i < ToplamSayfaSayisi; i++)
@@ -83,6 +83,6 @@ namespace muhAtolyesiProject
             }
 
             return sb.ToString();
-        } // Top 7
+        } // Top 3
     }
 }
