@@ -10,8 +10,7 @@
 
 <b>Main Folder</b>
 - Main.master
-- AntiSqlinjection.cs 
-(sql injection saldırılarını önleme)
+- AntiSqlinjection.cs (sql injection saldırılarını önleme)
 - accessDatabase.cs (model ile view arasındaki bağlantıları sağlıyor)
 - paging.cs (Makale sayfalama)
 - addThis Share Button (makaleleri sosyal medyada paylaşmak için)
@@ -60,7 +59,7 @@
 <b>Download Link</b>
 - https://yadi.sk/d/azNrQlxvZGYACA
 
-Destek
+<b>Destek</b>
 Herhangi bir sorun, geri bildirim veya özellik talebi için omerfaruk56@live.com adresine bir e-posta gönderin, github'da bir Issues oluşturun
 <br>
 
