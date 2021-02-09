@@ -10,7 +10,8 @@
 
 <b>Main Folder</b>
 - Main.master
-- AntiSqlinjection.cs (sql injection saldırılarını önleme)
+- AntiSqlinjection.cs 
+(sql injection saldırılarını önleme)
 - accessDatabase.cs (model ile view arasındaki bağlantıları sağlıyor)
 - paging.cs (Makale sayfalama)
 - addThis Share Button (makaleleri sosyal medyada paylaşmak için)
