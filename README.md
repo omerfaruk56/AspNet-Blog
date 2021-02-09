@@ -1,4 +1,4 @@
-# Genel Bakış
+# ASP.NET Blog Oluşturma ve Admin Paneli Kurma
 
 <b>Main Folder</b>
 - Main.master
