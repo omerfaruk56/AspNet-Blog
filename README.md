@@ -60,7 +60,7 @@
 - https://yadi.sk/d/azNrQlxvZGYACA
 
 <b>Destek</b>
-Herhangi bir sorun, geri bildirim veya özellik talebi için omerfaruk56@live.com adresine bir e-posta gönderin, github'da bir Issues oluşturun
+- Herhangi bir sorun, geri bildirim veya özellik talebi için omerfaruk56@live.com adresine bir e-posta gönderin, github'da bir Issues oluşturun
 <br>
 
 Database UML Diagram
