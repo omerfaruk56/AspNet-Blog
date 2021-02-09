@@ -1,11 +1,12 @@
 # ASP.NET Blog Oluşturma ve Admin Paneli Kurma
 
 <b>Kullanılan Teknolojiler</b>
-C#
-JavaScript
-CSS
-HTML
-
+- C#
+- ASP.NET
+- JavaScript
+- CSS
+- HTML
+- UI Responsive Web Design 
 
 <b>Main Folder</b>
 - Main.master
@@ -58,6 +59,9 @@ HTML
 <b>Download Link</b>
 - https://yadi.sk/d/azNrQlxvZGYACA
 
+Destek
+Herhangi bir sorun, geri bildirim veya özellik talebi için omerfaruk56@live.com adresine bir e-posta gönderin, github'da bir Issues oluşturun
+<br>
 
 Database UML Diagram
 
