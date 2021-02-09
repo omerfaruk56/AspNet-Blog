@@ -1,7 +1,4 @@
-# AspNet-Blog
-
-Arkadaşlar yapmış olduğum blog sitesini sizlere kısaca anlatmak istiyorum.
-Bu siteyi e-ticaret sitesi, kurumsal site vb.. şekillerde dönüşümler yaparak kullanabilirsiniz. 
+# Genel Bakış
 
 <b>Main Folder</b>
 - Main.master
