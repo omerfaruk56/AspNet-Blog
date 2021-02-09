@@ -1,5 +1,12 @@
 # ASP.NET Blog Oluşturma ve Admin Paneli Kurma
 
+<b>Kullanılan Teknolojiler</b>
+C#
+JavaScript
+CSS
+HTML
+
+
 <b>Main Folder</b>
 - Main.master
 - AntiSqlinjection.cs (sql injection saldırılarını önleme)
