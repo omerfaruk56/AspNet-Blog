@@ -63,11 +63,11 @@
 - Herhangi bir sorun, geri bildirim veya özellik talebi için omerfaruk56@live.com adresine bir e-posta gönderin, github'da bir Issues oluşturun
 <br>
 
-Masaüstü Görünüm
+## Masaüstü Görünüm
 
 <a href="https://www.linkpicture.com/view.php?img=LPic6043b0db245e9296099886"><img src="https://www.linkpicture.com/q/1_150.jpg" type="image"></a>
 
-Mobil Görünüm
+## Mobil Görünüm
 <a href="https://www.linkpicture.com/view.php?img=LPic6043b1614c143770792342"><img src="https://www.linkpicture.com/q/2_22.png" type="image"></a>
 
 Database UML Diagram
