@@ -67,6 +67,9 @@ Masaüstü Görünüm
 
 <a href="https://www.linkpicture.com/view.php?img=LPic6043b0db245e9296099886"><img src="https://www.linkpicture.com/q/1_150.jpg" type="image"></a>
 
+Mobil Görünüm
+<a href="https://www.linkpicture.com/view.php?img=LPic6043b1614c143770792342"><img src="https://www.linkpicture.com/q/2_22.png" type="image"></a>
+
 Database UML Diagram
 
 ![](https://i.hizliresim.com/1IqEQQ.png)
